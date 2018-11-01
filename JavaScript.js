@@ -7,6 +7,14 @@ for (var i = 0; i < myNodeList.length; i++) {
 	span.appendChild(txt);
 	myNodeList[i].appendChild(span);
 }
+var myNodeList2 = document.getElementsByTagName("LI");
+for (var i = 0; i < myNodeList2.length; i++) {
+	var span = createElement("SPAN");
+	var txt = document.createTextNode("img");
+	span.className = "close";
+	span.appendChild(txt);
+	myNodeList2[i].appendChild(span);
+}
 
 /* Прячем задачу по нажатию на закрыть */
 var close = document.getElementsByClassName("close");
