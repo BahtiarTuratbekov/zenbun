@@ -1,0 +1,142 @@
+/* Общая высота, ширина и граница */
+* {
+	box-sizing: border-box;
+}
+
+/* Убрать все отступы */
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+/* Стиль задач */
+ul li {
+	cursor: pointer;
+	position: relative;
+	padding: 12px 8px 12px 40px;
+	background: #eee;
+	font-size: 18px;
+	transition: 0.2s;
+
+	/* Неактивные заметки*/
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Зебра стиль */
+ul li:nth-child(odd) {
+	background: #f9f9f9;
+}
+
+/* Затемнение при наведении */
+ul li:hover {
+	padding: 12px 8px 12px 40px;
+	font-size: 23px;
+	background: #1B1BBD;
+	color: white;
+	box-shadow: 0px -5px 10px #494949;
+	margin-bottom: 4px;
+	margin-top: -3px;
+}
+
+/* Завершенные задачи */
+ul li.checked {
+	background: #888;
+	color: #fff;
+	text-decoration: line-through;
+}
+
+/* Галочка */
+ul li.checked:before {
+	content: '';
+	position: absolute;
+	border-color: #fff;
+	border-style: solid;
+	border-width: 0 2px 2px 0;
+	top: 10px;
+	left: 16px;
+	transform: rotate(45deg);
+	height: 15px;
+	width: 7px;
+}
+
+/* Кнопка закрыть "Х" */
+.close {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 12px 16px 12px 16px;
+}
+.close:hover {
+	background-color: red;
+	color: white;
+}
+
+/* Шапка */
+.header {
+	background-color: red;
+	padding: 30px 40px;
+	color: white;
+	text-align: center;
+}
+
+/* Очистка пространства после шапки */
+.header:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+/* Стиль задач */
+input {
+	margin: 0;
+	border: none;
+	border-radius: 0;
+	width: 75%;
+	padding: 10px;
+	float: left;
+	font-size: 16px;
+	transition: 0.3s;
+}
+input:hover {
+	margin: 0;
+	border: none;
+	border-radius: 0;
+	width: 75%;
+	padding: 10px;
+	float: left;
+	font-size: 16px;
+	box-shadow: 2px 2px 10px black;
+	transition: 0.3s;
+}
+
+/* Стиль кнопки добавить задачу */
+.addBtn {
+	padding: 10px;
+	width: 25%;
+	background: gray;
+	color: black;
+	float: left;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+	transition: 0.3s;
+	border-radius: 0;
+}
+.addBtn:hover {
+	margin-left: 10px;
+	padding: 10px;
+	width: 20%;
+	background: #03C103;
+	color: black;
+	float: left;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+	transition: 0.3s;
+	border-radius: 0;
+	box-shadow: 2px 2px 10px black;
+}
+
